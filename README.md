@@ -31,6 +31,8 @@ API
   
   Headers:
   - `Access-Control-Allow-Origin: *`
+- `GET /source`  
+  Get the source code.
 
 Keywords
 --------
