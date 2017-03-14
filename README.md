@@ -4,9 +4,9 @@ Status images for your dockerhub automated build (like those for travis)
 Architecture
 ------------
 
-SVG image
-- pulls JS file
-  - JS file includes list of status servers (since dockerhub does not allow crossorigin requests)
+- SVG image
+  - pulls JS file
+    - JS file includes list of status servers (since dockerhub does not allow crossorigin requests)
 - status servers
   - form
     - a python package
