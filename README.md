@@ -54,6 +54,10 @@ Parameters:
 - `text` is the text to show on the bagde.
   If it is left out, it is `Docker`.
   
+Examples:
+- ![](status.svg?organization=mariobehling&repository=loklak)
+  `status.svg?organization=mariobehling&repository=loklak`
+  
 Keywords
 --------
 
