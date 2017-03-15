@@ -38,10 +38,13 @@ function request_from_server(server) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        var result = JSON.parse(this.responseText)
+        var result = JSON.parse(this.responseText);
+        console.log("Response from " + url);
+        console.log(result);
         status_arrived(url, result);
     }
   };
+  console.log("Requesting " + url);
   xhttp.open("GET", url, true);
   xhttp.send();
 }
@@ -52,12 +55,19 @@ function status_arrived(url, status) {
     return
   }
   if (status.status < 0) {
-      set_text("status", "error")
-      set_text("status-shadow", "error")
+      set_text("status", "error");
+      set_text("status-shadow", "error");
+      set_color("#c41");
   } else {
-      set_text("status", "ok")
-      set_text("status-shadow", "ok")
+      set_text("status", "ok");
+      set_text("status-shadow", "ok");
+      set_color("#4c1");
   }
+}
+
+function set_color(color) {
+  var element = document.getElementById("status-color");
+  element.style.fill = color;
 }
 
 function set_text(id, text) {
