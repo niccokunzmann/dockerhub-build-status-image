@@ -59,13 +59,15 @@ Parameters:
   If it is left out, it is `Docker`.
   
 Examples:
-- ![](status.svg?organization=mariobehling&repository=loklak)
-  `status.svg?organization=mariobehling&repository=loklak`
+- ![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)
+  `https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image`
 
 Contribute
 ----------
 
-You can contribute a build server.
+You can contribute a build server to this list:
+
+- https://dockerbuildbadges.quelltext.eu/status.svg
 
 Keywords
 --------
