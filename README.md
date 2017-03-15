@@ -1,4 +1,7 @@
 # dockerhub-build-status-image
+
+![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)
+
 Status images for your dockerhub automated build (like those for travis)
 
 Architecture
