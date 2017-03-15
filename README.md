@@ -68,12 +68,18 @@ Examples:
   If you have JavaScript enabled, this will ask for several servers.
   This is more fault in case servers go down.
   
+Badge Servers
+-------------
+
+You can contribute a badge server to this list here and in [status.js](status.js):
+
+- https://dockerbuildbadges.quelltext.eu/status.svg
+
 Contribute
 ----------
 
-You can contribute a build server to this list here and in [status.js](status.js):
-
-- https://dockerbuildbadges.quelltext.eu/status.svg
+As said, you can contribute a server or write your own - the API is open.
+You can [solve issues](https://github.com/niccokunzmann/dockerhub-build-status-image/issues).
 
 Keywords
 --------
