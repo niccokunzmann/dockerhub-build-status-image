@@ -28,6 +28,7 @@ def get_status(organization, repository):
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, OPTIONS'
     response.headers['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token'
     while url:
+        print("Requesting {}".format(url))
         status = requests.get(url)
         data = status.json()
         url = data["next"] # TODO: error handling
