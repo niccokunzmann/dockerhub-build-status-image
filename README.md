@@ -57,7 +57,7 @@ Parameters:
 Examples:
 - ![](status.svg?organization=mariobehling&repository=loklak)
   `status.svg?organization=mariobehling&repository=loklak`
-  <object data="status.svg?organization=mariobehling&repository=loklak" type="image/svg+xml">
+  <object data="status.svg?organization=mariobehling&repository=loklak" type="image/svg+xml"></object>
   
 Keywords
 --------
