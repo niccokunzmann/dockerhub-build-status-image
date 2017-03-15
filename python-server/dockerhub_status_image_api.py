@@ -14,19 +14,38 @@ __author__ = "Nicco Kunzmann"
 
 API = "https://hub.docker.com/v2/repositories/{organization}/{repository}/buildhistory/?page_size=100"
 DEFAULT_TAG = "latest"
+DEFAULT_ORGANIZATION = "library"
+DEFAULT_TEXT = "Docker"
+SVG = """
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="20">
+  <linearGradient id="b" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="a">
+    <rect width="72" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#a)">
+    <path fill="#555" d="M0 0h43v20H0z"/>
+    <path fill="{color}" d="M43 0h29v20H43z"/>
+    <path fill="url(#b)" d="M0 0h72v20H0z"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+    <text x="21.5" y="15" fill="#010101" fill-opacity=".3">{text}</text>
+    <text x="21.5" y="14">{text}</text>
+    <text x="56.5" y="15" fill="#010101" fill-opacity=".3">{status}</text>
+    <text x="56.5" y="14">{status}</text>
+  </g>
+</svg>
+"""
 
 @get('/source')
 def static():
     return static_file(os.path.basename(__file__),
                        root=os.path.dirname(__file__))
 
-@get("/build/<organization>/<repository>")
-def get_status(organization, repository):
+def get_status(organization, repository, tag):
     url = API.format(organization=organization, repository=repository)
-    tag = request.query.get("tag", DEFAULT_TAG)
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, OPTIONS'
-    response.headers['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token'
     while url:
         print("Requesting {}".format(url))
         status = requests.get(url)
@@ -35,9 +54,36 @@ def get_status(organization, repository):
         results = data["results"] # TODO: error handling
         for build in results:
             if build["dockertag_name"] == tag: # TODO: error handling
-               status = build["status"] # TODO: error handling
-               return {"request": "ok", "status": status}
-    return {"request": "error", "description": "tag {} not found".format(tag)}
+               return build["status"] # TODO: error handling
+    return None
+
+
+@get("/build/<organization>/<repository>")
+def get_build_status(organization, repository):
+    tag = request.query.get("tag", DEFAULT_TAG)
+    status = get_status(organization, repository, tag)
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, OPTIONS'
+    response.headers['Access-Control-Allow-Headers'] = 'Origin, Accept, Content-Type, X-Requested-With, X-CSRF-Token'
+    if status is None:
+        return {"request": "error", "description": "tag {} not found".format(tag)}
+    return {"request": "ok", "status": status}
+
+@get("/status.svg")
+def get_svg():
+    organization = request.query.get("organization", DEFAULT_ORGANIZATION)
+    repository = request.query["repository"]
+    tag = request.query.get("tag", DEFAULT_TAG)
+    text = request.query.get("text", DEFAULT_TEXT)
+    status = get_status(organization, repository, tag)
+    response.content_type = "image/svg+xml"
+    if status < 0:
+        code = "error"
+        color = "#c41"
+    else:
+        code = "ok"
+        color = "#4c1"
+    return SVG.format(color=color, text=text, status=code)
 
 def main():
     run(host='', port=80, debug=True)
