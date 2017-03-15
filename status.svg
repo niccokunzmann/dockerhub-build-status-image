@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="20">
+  <script language="text/javascript">
+    var servers = ["http://localhost"];
+    
+    function getQueryParams() {
+      var qs = document.location.search;
+      // from http://stackoverflow.com/a/1099670/1320237
+      qs = qs.split("+").join(" ");
+
+      var params = {}, tokens,
+          re = /[?&]?([^=]+)=([^&]*)/g;
+
+      while (tokens = re.exec(qs)) {
+        params[decodeURIComponent(tokens[1])] = decodeURIComponent(tokens[2]);
+      }
+      return params;
+    }
+    
+    var parameters = getQueryParams();
+    
+    function request_from_server(server) {
+      var url = server + "/build/" + parameters.organization + "/" + parameters.repository;
+      if (parameters.tag) {
+        url += "?tag=" + tag;
+      }
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var result = JSON.parse(this.responseText)
+            status_arrived(url, result);
+        }
+      };
+      xhttp.open("GET", url, true);
+      xhttp.send();
+    }
+    
+    function status_arrived(url, status) {
+      if (status.request != "ok") {
+        console.error(url + " error: " + status.description);
+        return
+      }
+      if (status.status < 0) {
+          set_text("status", "error")
+          set_text("status-shadow", "error")
+      } else {
+          set_text("status", "ok")
+          set_text("status-shadow", "ok")
+      }
+    }
+    
+    function set_text(id, text) {
+      var element = document.getElementById(id);
+      element.innerText = text;
+    }
+    
+  </script>
+  <linearGradient id="b" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="a">
+    <rect width="72" height="20" rx="3" fill="#fff"/>
+  </clipPath>
+  <g clip-path="url(#a)">
+    <path fill="#555" d="M0 0h43v20H0z"/>
+    <path id="status-color" fill="#4c1" d="M43 0h29v20H43z"/>
+    <path fill="url(#b)" d="M0 0h72v20H0z"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+    <text id="name-shadow" x="21.5" y="15" fill="#010101" fill-opacity=".3">Docker</text>
+    <text id="name" x="21.5" y="14">Docker</text>
+    <text id="status" x="56.5" y="15" fill="#010101" fill-opacity=".3">???</text>
+    <text id="status-shadow" x="56.5" y="14">???</text>
+  </g>
+</svg>
