@@ -2,7 +2,7 @@
 
 ![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)
 
-Status images for your dockerhub automated build (like those for travis)
+Show status badges of your dockerhub automated build in your README.md (like those for travis).
 
 Architecture
 ------------
