@@ -80,6 +80,8 @@ Contribute
 
 As said, you can contribute a server or write your own - the API is open.
 You can [solve issues](https://github.com/niccokunzmann/dockerhub-build-status-image/issues).
+I created the most basic version.
+Surely, if you have a look, you can show this project some love and improve it <3
 
 Keywords
 --------
