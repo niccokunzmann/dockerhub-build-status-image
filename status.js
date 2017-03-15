@@ -1,5 +1,5 @@
 
-var servers = ["http://localhost"];
+var servers = ["http://localhost", "https://dockerbuildbadges.quelltext.eu/"];
 
 
 
