@@ -43,7 +43,11 @@ API
 - `GET /source`  
   Get the source code.
 
+- `GET /status.svg`  
+  See [status.svg][status]
+
 ### status.svg
+[status]: statussvg
 
 Parameters:
 - `organization` is the name of the dockerhub organization.
