@@ -73,7 +73,7 @@ Badge Servers
 
 You can contribute a badge server to this list here and in [status.js](status.js):
 
-- https://dockerbuildbadges.quelltext.eu/status.svg
+- https://dockerbuildbadges.quelltext.eu/status.svg (daily update, docker)
 
 Contribute
 ----------
