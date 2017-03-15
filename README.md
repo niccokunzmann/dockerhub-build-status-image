@@ -97,3 +97,4 @@ Reading
   - https://forums.docker.com/t/docker-hub-api-documentation/9091/3
   - https://hub.docker.com/v2/repositories/mariobehling/loklak/buildhistory/?page_size=100
   - https://hub.docker.com/v2/repositories/mariobehling/loklak/autobuild/
+- This repository is part of the [first-timers-only](https://github.com/search?utf8=%E2%9C%93&q=label%3Afirst-timers-only+is%3Aopen&type=Issues&ref=searchresults) issue series - for people who want to get into open-source.
