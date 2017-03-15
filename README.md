@@ -64,11 +64,14 @@ Parameters:
 Examples:
 - ![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)
   `https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image`
-
+- https://niccokunzmann.github.io/dockerhub-build-status-image/status.svg?organization=mariobehling&repository=loklak  
+  If you have JavaScript enabled, this will ask for several servers.
+  This is more fault in case servers go down.
+  
 Contribute
 ----------
 
-You can contribute a build server to this list:
+You can contribute a build server to this list here and in [status.js](status.js):
 
 - https://dockerbuildbadges.quelltext.eu/status.svg
 

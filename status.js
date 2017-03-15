@@ -1,7 +1,6 @@
 
-var servers = ["http://localhost", "https://dockerbuildbadges.quelltext.eu/"];
-
-
+// No / at the end!
+var servers = ["http://localhost", "https://dockerbuildbadges.quelltext.eu"];
 
 function escapeHtml(unsafe) {
   // from http://stackoverflow.com/a/6234804/1320237
