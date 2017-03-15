@@ -17,6 +17,8 @@ Architecture
 API
 ---
 
+### Server
+
 - `GET /build/<organnization>/<repository>`  
   `GET /build/<organnization>/<repository>?tag=<tag>`  
   Get the build status of an automated build.
@@ -41,6 +43,17 @@ API
 - `GET /source`  
   Get the source code.
 
+### status.svg
+
+Parameters:
+- `organization` is the name of the dockerhub organization.
+  If it is left out, it will be `library`.
+- `repository` is the name of the repository. This must be given.
+- `tag` is the name of the tag to use.
+  If it is left out, it is `latest`.
+- `text` is the text to show on the bagde.
+  If it is left out, it is `Docker`.
+  
 Keywords
 --------
 
