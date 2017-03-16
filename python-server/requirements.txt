@@ -1,2 +1,6 @@
 bottle==0.12.9
 requests==2.10.0
+cherrypy==10.2.1
+cheroot==5.3.0 # through cherrypy
+portend==1.8 # through cherrypy
+tempora==1.6.1 # through cherrypy

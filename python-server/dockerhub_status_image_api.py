@@ -86,7 +86,7 @@ def get_svg():
     return SVG.format(color=color, text=text, status=code)
 
 def main():
-    run(host='', port=80, debug=True)
+    run(host='', port=80, debug=True, server="cherrypy")
 
 if __name__ == "__main__":
     main()
