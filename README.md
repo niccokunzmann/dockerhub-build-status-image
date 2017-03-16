@@ -4,8 +4,7 @@
 
 Show status badges of your dockerhub automated build in your README.md (like those for travis).
 
-As soon as an image is here, this can be used from [shields.io](http://shields.io/).
-![](https://img.shields.io/docker/build/mariobehling/loklak.svg)
+As soon as an image is here (![](https://img.shields.io/docker/build/mariobehling/loklak.svg)), this can be used from [shields.io](http://shields.io/).
 
 Architecture
 ------------
