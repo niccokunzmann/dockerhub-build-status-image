@@ -4,6 +4,9 @@
 
 Show status badges of your dockerhub automated build in your README.md (like those for travis).
 
+As soon as an image is here, this can be used from [shields.io](http://shields.io/).
+![](https://img.shields.io/docker/build/mariobehling/loklak.svg)
+
 Architecture
 ------------
 
@@ -98,3 +101,4 @@ Reading
   - https://hub.docker.com/v2/repositories/mariobehling/loklak/buildhistory/?page_size=100
   - https://hub.docker.com/v2/repositories/mariobehling/loklak/autobuild/
 - This repository is part of the [first-timers-only](https://github.com/search?utf8=%E2%9C%93&q=label%3Afirst-timers-only+is%3Aopen&type=Issues&ref=searchresults) issue series - for people who want to get into open-source.
+- [shields.io issue](https://github.com/badges/shields/issues/886)
