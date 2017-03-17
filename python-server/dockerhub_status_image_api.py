@@ -31,10 +31,13 @@ SVG = """
     <path fill="url(#b)" d="M0 0h72v20H0z"/>
   </g>
   <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+    <a xlink:href="https://github.com/niccokunzmann/dockerhub-build-status-image"
+      target="_blank">
     <text x="21.5" y="15" fill="#010101" fill-opacity=".3">{text}</text>
     <text x="21.5" y="14">{text}</text>
     <text x="56.5" y="15" fill="#010101" fill-opacity=".3">{status}</text>
     <text x="56.5" y="14">{status}</text>
+    </a>
   </g>
 </svg>
 """
