@@ -52,7 +52,7 @@ API
   See [status.svg][status]
 
 ### status.svg
-[status]: statussvg
+[status]: status.svg
 
 Parameters:
 - `organization` is the name of the dockerhub organization.
