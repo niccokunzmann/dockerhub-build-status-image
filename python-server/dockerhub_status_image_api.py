@@ -83,6 +83,7 @@ def get_svg():
     else:
         code = "ok"
         color = "#4c1"
+    response.set_header('Cache-Control', 'max-age=3600')
     return SVG.format(color=color, text=text, status=code)
 
 def main():
