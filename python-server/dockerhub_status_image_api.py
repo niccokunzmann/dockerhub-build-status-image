@@ -61,7 +61,7 @@ HTML_OF_ROOT = """
                 <code>https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image </code>
             </li>
         </ul>
-        <a href="https://github.com/niccokunzmann/dockerhub-build-status-image/archive/master.zip"><h2>Download source code</h2></a>
+        <a href="/source"><h2>Download source code</h2></a>
     </body>
 </html>
 """
