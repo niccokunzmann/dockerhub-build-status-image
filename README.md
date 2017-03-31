@@ -1,6 +1,7 @@
 # dockerhub-build-status-image
 
-[![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)](https://hub.docker.com/r/niccokunzmann/dockerhub-build-status-image/builds/)
+[![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)](https://hub.docker.com/r/niccokunzmann/dockerhub-build-status-image/builds/)  
+`https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image`
 
 Show status badges of your dockerhub automated build in your README.md (like those for travis).
 
