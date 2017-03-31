@@ -1,8 +1,10 @@
 # dockerhub-build-status-image
 
-![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)
+[![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)](https://hub.docker.com/r/niccokunzmann/dockerhub-build-status-image/builds/)
 
 Show status badges of your dockerhub automated build in your README.md (like those for travis).
+
+As soon as an image is here (![](https://img.shields.io/docker/build/mariobehling/loklak.svg)), this can be used from [shields.io](http://shields.io/).
 
 Architecture
 ------------
@@ -50,7 +52,7 @@ API
   See [status.svg][status]
 
 ### status.svg
-[status]: statussvg
+[status]: #statussvg
 
 Parameters:
 - `organization` is the name of the dockerhub organization.
@@ -97,3 +99,9 @@ Reading
   - https://forums.docker.com/t/docker-hub-api-documentation/9091/3
   - https://hub.docker.com/v2/repositories/mariobehling/loklak/buildhistory/?page_size=100
   - https://hub.docker.com/v2/repositories/mariobehling/loklak/autobuild/
+- This repository is part of the [first-timers-only](https://github.com/search?utf8=%E2%9C%93&q=label%3Afirst-timers-only+is%3Aopen&type=Issues&ref=searchresults) issue series - for people who want to get into open-source.
+- [shields.io issue](https://github.com/badges/shields/issues/886)
+
+---
+
+The repository is maintained at <https://github.com/niccokunzmann/dockerhub-build-status-image/>

@@ -12,10 +12,13 @@
     <path fill="url(#b)" d="M0 0h72v20H0z"/>
   </g>
   <g fill="#fff" text-anchor="middle" font-family="DejaVu Sans,Verdana,Geneva,sans-serif" font-size="11">
+   <a xlink:href="https://github.com/niccokunzmann/dockerhub-build-status-image"
+      target="_blank">
     <text id="name-shadow" x="21.5" y="15" fill="#010101" fill-opacity=".3">Docker</text>
     <text id="name" x="21.5" y="14">Docker</text>
     <text id="status-shadow" x="56.5" y="15" fill="#010101" fill-opacity=".3">???</text>
     <text id="status" x="56.5" y="14">???</text>
+    </a>
   </g>
   <script xmlns="http://www.w3.org/2000/svg" xlink:href="status.js" xmlns:xlink="http://www.w3.org/1999/xlink"/>
 </svg>
