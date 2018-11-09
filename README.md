@@ -5,20 +5,20 @@
 
 Show status badges of your dockerhub automated build in your README.md (like those for travis).
 
-As soon as an image is here (![](https://img.shields.io/docker/build/mariobehling/loklak.svg)), this can be used from [shields.io](http://shields.io/).
+As soon as an image is here ![](https://img.shields.io/docker/build/mariobehling/loklak.svg), it can be used from [shields.io](http://shields.io/).
 
 Architecture
 ------------
 
 - SVG image
-  - pulls JS file
+  - Pulls JS file
     - JS file includes list of status servers (since dockerhub does not allow crossorigin requests)
-- status servers
-  - form
-    - a python package
-    - a docker container (to use the badge :) )
-    - a heroku deploy
-  - may serve the svg file but better if they do not, to provide more fault tolerance, see the JS file
+- Status servers
+  - Form
+    - A python package
+    - A docker container (to use the badge :) )
+    - A heroku deploy
+  - May serve the svg file but better if they do not. To provide more fault tolerance, see the JS file
 
 API
 ---
@@ -57,12 +57,12 @@ API
 
 Parameters:
 - `organization` is the name of the dockerhub organization.
-  If it is left out, it will be `library`.
+  If it is left out, the name will be `library`.
 - `repository` is the name of the repository. This must be given.
 - `tag` is the name of the tag to use.
-  If it is left out, it is `latest`.
+  If it is left out, the tag will be `latest`.
 - `text` is the text to show on the badge.
-  If it is left out, it is `Docker`.
+  If it is left out, the text will be `Docker`.
   
 Examples:
 - ![](https://dockerbuildbadges.quelltext.eu/status.svg?organization=niccokunzmann&repository=dockerhub-build-status-image)
@@ -81,17 +81,17 @@ You can contribute a badge server to this list here and in [status.js](status.js
 Contribute
 ----------
 
-As said, you can contribute a server or write your own - the API is open.
-You can [solve issues](https://github.com/niccokunzmann/dockerhub-build-status-image/issues).
+As said, you can contribute a server or write your own. The API is open.
+Contribute by solving [issues](https://github.com/niccokunzmann/dockerhub-build-status-image/issues).
 I created the most basic version.
-Surely, if you have a look, you can show this project some love and improve it <3
+Have a look and show this project some love and improve it <3
 
 Keywords
 --------
 
-- status images for dockerhub automated builds
-- build status badge for docker images
-- svg badges
+- Status images for dockerhub automated builds
+- Build status badge for docker images
+- SVG badges
 
 Reading
 -------
